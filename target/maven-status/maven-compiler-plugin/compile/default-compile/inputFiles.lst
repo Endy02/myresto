@@ -1,3 +1,7 @@
-D:\Dev\Programmes\xampp\htdocs\eclipse-workspace\demoSpringBoot-Objis\src\main\java\com\alexis\laucher\DemoApplication.java
-D:\Dev\Programmes\xampp\htdocs\eclipse-workspace\demoSpringBoot-Objis\src\main\java\com\alexis\domaine\Formation.java
-D:\Dev\Programmes\xampp\htdocs\eclipse-workspace\demoSpringBoot-Objis\src\main\java\com\alexis\laucher\ServletInitializer.java
+D:\Dev\Programmes\xampp\htdocs\eclipse-workspace\myresto\src\main\java\com\myresto\laucher\DemoApplication.java
+D:\Dev\Programmes\xampp\htdocs\eclipse-workspace\myresto\src\main\java\com\myresto\domaine\User.java
+D:\Dev\Programmes\xampp\htdocs\eclipse-workspace\myresto\src\main\java\com\myresto\service\ProduitService.java
+D:\Dev\Programmes\xampp\htdocs\eclipse-workspace\myresto\src\main\java\com\myresto\dao\ProduitDao.java
+D:\Dev\Programmes\xampp\htdocs\eclipse-workspace\myresto\src\main\java\com\myresto\dao\IProduitDao.java
+D:\Dev\Programmes\xampp\htdocs\eclipse-workspace\myresto\src\main\java\com\myresto\domaine\Produit.java
+D:\Dev\Programmes\xampp\htdocs\eclipse-workspace\myresto\src\main\java\com\myresto\laucher\ServletInitializer.java

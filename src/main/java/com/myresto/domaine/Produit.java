@@ -13,16 +13,16 @@ public class Produit {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	private Long idProduit;
+	private int id;
+	private int idType;
 	private String libelle;
 	private double prix;
 	
 	//Constructors
-	public Produit(Long id, Long idProduit, String libelle, double prix) {
+	public Produit(int id, int idType, String libelle, double prix) {
 		super();
 		this.id = id;
-		this.idProduit = idProduit;
+		this.idType = idType;
 		this.libelle = libelle;
 		this.prix = prix;
 	}
@@ -31,20 +31,20 @@ public class Produit {
 		super();	
 	}
 	
-	public Produit(Long id, String libelle, double prix) {
+	public Produit(int idType,String libelle, double prix) {
 		super();
-		this.id = id;
+		this.idType = idType;
 		this.libelle = libelle;
 		this.prix = prix;
 	}
 
 	//Getters
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public Long getIdProduit() {
-		return idProduit;
+	public int getidType() {
+		return idType;
 	}
 
 	public String getLibelle() {
@@ -56,12 +56,12 @@ public class Produit {
 	}
 
 	//Setters
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	public void setIdProduit(Long idProduit) {
-		this.idProduit = idProduit;
+	public void setidType(int idType) {
+		this.idType = idType;
 	}
 
 	public void setLibelle(String libelle) {
