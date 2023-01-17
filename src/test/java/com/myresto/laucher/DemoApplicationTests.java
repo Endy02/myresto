@@ -1,4 +1,4 @@
-package com.alexis.laucher;
+package com.myresto.laucher;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
