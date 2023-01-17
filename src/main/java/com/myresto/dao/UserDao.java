@@ -53,5 +53,9 @@ public class UserDao implements IUserDao{
 	public void deleteUser(int id) {
 		jdbcTemplate.execute("DELETE FROM myresto.user where user.id ="+id);
 	}
+	
 	//ChangePassword
+	public void changePassword(User u) {
+		
+	}
 }

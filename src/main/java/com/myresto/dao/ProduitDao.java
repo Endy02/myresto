@@ -29,7 +29,6 @@ public class ProduitDao implements IProduitDao{
 		arguments[1] = p.getLibelle();
 		arguments[2] = p.getPrix();
 		jdbcTemplate.update("INSERT INTO myresto.produit(id_type,libelle,prix) VALUES(?,?,?)",arguments);
-		
 	}
 	//UPDATE
 	public void updateProduit(Produit p) {
