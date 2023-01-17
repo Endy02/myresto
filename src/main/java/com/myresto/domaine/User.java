@@ -13,36 +13,57 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	private String name;
-	private boolean gerant;
+	private int id;
+	private String mail;
 	private String password;
+	private String username;
 	private String address;
-	
-	
-	public User(Long id, String name, boolean gerant, String password, String address) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.gerant = gerant;
-		this.password = password;
-		this.address = address;
-	}
+	private String tel;
+	private boolean gerant;
 
 	
+	public User(int id, String mail, String password, String username, String address, String tel, boolean gerant) {
+		super();
+		this.id = id;
+		this.mail = mail;
+		this.password = password;
+		this.username = username;
+		this.address = address;
+		this.tel = tel;
+		this.gerant = gerant;
+	}
+	
+	public User() {
+		
+	}
+	
+	public User(String mail, String password, String username, String address, String tel, boolean gerant) {
+		super();
+		this.mail = mail;
+		this.password = password;
+		this.username = username;
+		this.address = address;
+		this.tel = tel;
+		this.gerant = gerant;
+	}
+
+	public User(int id, String mail, String username, String address, String tel, boolean gerant) {
+		super();
+		this.id = id;
+		this.mail = mail;
+		this.username = username;
+		this.address = address;
+		this.tel = tel;
+		this.gerant = gerant;
+	}
 	//Getters
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
 
-	public String getName() {
-		return name;
-	}
-
-
-	public boolean isGerant() {
-		return gerant;
+	public String getMail() {
+		return mail;
 	}
 
 
@@ -51,24 +72,34 @@ public class User {
 	}
 
 
+	public String getUsername() {
+		return username;
+	}
+
+
 	public String getAddress() {
 		return address;
 	}
-	
+
+
+	public String getTel() {
+		return tel;
+	}
+
+
+	public boolean isGerant() {
+		return gerant;
+	}
+
 	
 	//Setters
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-
-	public void setGerant(boolean gerant) {
-		this.gerant = gerant;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 
@@ -77,13 +108,25 @@ public class User {
 	}
 
 
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	
 
-	
+
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
+
+	public void setGerant(boolean gerant) {
+		this.gerant = gerant;
+	}
+
 	
 	
 	
