@@ -17,11 +17,12 @@ public class CommandeDao implements ICommandeDao {
 	}
 	
 	//READ
+	@SuppressWarnings("deprecation")
 	@Override
 	public Commande getCommandeById(int id ) {
 		Object[] arguments = new Object[1];
 		arguments[0]= id;
-		return (Commande) jdbcTemplate.query("Select * from commande where id =?", (resultSet, RowNum) ->{
+		return (Commande) jdbcTemplate.queryForObject("Select * from commande where id=?",arguments, (resultSet, RowNum) ->{
 			return new Commande(resultSet.getInt("id"),resultSet.getInt("id_User"),resultSet.getDate("date"));
 		});
 	}
@@ -45,7 +46,8 @@ public class CommandeDao implements ICommandeDao {
 		arguments[0] = c.getId();
 		arguments[1] = c.getIdUser();
 		arguments[2] = c.getDate();
-		jdbcTemplate.update("UPDATE commande SET id_user=?,date=? WHERE id = ?", arguments);
+		System.out.printf("UPDATE commande SET id_user=?,date=? WHERE id = ?", arguments);
+		jdbcTemplate.update("UPDATE commande SET id_user=?, date=? WHERE id=?", arguments);
 	}
 
 	@Override
