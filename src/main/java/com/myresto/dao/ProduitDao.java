@@ -18,13 +18,14 @@ public class ProduitDao implements IProduitDao{
 	}
 	//READ
 		@Override
-		public Produit getProduitById(int id ) {
-			Object[] arguments = new Object[1];
-			arguments[0]= id;
-			return (Produit) jdbcTemplate.query("Select * from from myresto.produit where id =?", (resultSet, RowNum) ->{
-				return new Produit(resultSet.getInt("id"),resultSet.getInt("id"),resultSet.getString("libelle"),resultSet.getDouble("prix"));
-			});
-		}
+	public Produit getProduitById(int id ) {
+		Object[] arguments = new Object[1];
+		arguments[0]= id;
+		return (Produit) jdbcTemplate.query("Select * from from myresto.produit where id =?", (resultSet, RowNum) ->{
+			return new Produit(resultSet.getInt("id"),resultSet.getInt("id"),resultSet.getString("libelle"),resultSet.getDouble("prix"));
+		});
+	}
+
 	//Read
 	public List<Produit> getAllProducts(){
 		return jdbcTemplate.query("Select * from myresto.produit",(resultSet, rowNum) -> {
