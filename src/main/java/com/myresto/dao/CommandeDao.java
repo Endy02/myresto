@@ -46,8 +46,9 @@ public class CommandeDao implements ICommandeDao {
 		arguments[0] = c.getId();
 		arguments[1] = c.getIdUser();
 		arguments[2] = c.getDate();
-		System.out.printf("UPDATE commande SET id_user=?,date=? WHERE id = ?", arguments);
-		jdbcTemplate.update("UPDATE commande SET id_user=?, date=? WHERE id=?", arguments);
+		System.out.println(arguments[0].getClass().getName()+" "+ arguments[1].getClass().getName()+" "+arguments[2].getClass().getName());
+		System.out.println(c.getIdUser());
+		jdbcTemplate.update("UPDATE commande SET id_user=?, date=? WHERE id=?", arguments[1],arguments[2], arguments[0]);
 	}
 
 	@Override
