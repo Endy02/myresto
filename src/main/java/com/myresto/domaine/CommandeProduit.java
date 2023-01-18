@@ -17,9 +17,10 @@ public class CommandeProduit {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private int idCommande;
-	private int idProduit;
+	private int [] idProduit;
 	private int qte;
 	private boolean menu;
+	private double prixTotal;
 	List<Produit> produits= new ArrayList<Produit>();
 	Commande commandes;
 	
@@ -28,11 +29,10 @@ public class CommandeProduit {
 		super();
 	}
 	
-	public CommandeProduit(int id, int idCommande, int idProduit, int qte, boolean menu) {
+	public CommandeProduit(int id, int idCommande, int qte, boolean menu) {
 		super();
 		this.id = id;
 		this.idCommande = idCommande;
-		this.idProduit = idProduit;
 		this.qte = qte;
 		this.menu = menu;
 	}
@@ -50,10 +50,10 @@ public class CommandeProduit {
 	public void setIdCommande(int idCommande) {
 		this.idCommande = idCommande;
 	}
-	public int getIdProduit() {
+	public int [] getIdProduit() {
 		return idProduit;
 	}
-	public void setIdProduit(int idProduit) {
+	public void setIdProduit(int [] idProduit) {
 		this.idProduit = idProduit;
 	}
 	public int getQte() {
@@ -83,6 +83,14 @@ public class CommandeProduit {
 
 	public void setCommandes(Commande commandes) {
 		this.commandes = commandes;
+	}
+
+	public double getPrixTotal() {
+		return prixTotal;
+	}
+
+	public void setPrixTotal(double prixTotal) {
+		this.prixTotal = prixTotal;
 	}
 	
 }
