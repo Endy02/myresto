@@ -31,10 +31,8 @@ public class UserDao implements IUserDao{
 		arguments[2] = u.getUsername();
 		arguments[3] = u.getAddress();
 		arguments[4] = u.getTel();
-		arguments[5] = u.isGerant();
-		
-		jdbcTemplate.update("INSERT INTO myresto.user(mail,password,username,address,tel,gerant) VALUES(?,?,?,?,?,?)",arguments);
-		
+		arguments[5] = u.isGerant();		
+		jdbcTemplate.update("INSERT INTO myresto.user(mail,password,username,address,tel,gerant) VALUES(?,PASSWORD('?'),?,?,?,?)",arguments);
 	}
 	
 	//UpdateInfo
@@ -47,7 +45,13 @@ public class UserDao implements IUserDao{
 		arguments[4] = u.isGerant();
 		jdbcTemplate.update("INSERT INTO myresto.user(mail,password,username,address,tel,gerant) VALUES(?,?,?,?,?,?)",arguments);
 	}
-	
+	//Login
+	public User login(String login, String password) {
+		return (User) jdbcTemplate.query("Select id,mail,username,address,tel,gerant from user where username='"+login+"' and password=PASSWORD('"+password+"')",(resultSet, rowNum) -> {
+			return new User(resultSet.getInt("id"),resultSet.getString("mail"),resultSet.getString("username"),resultSet.getString("address"),resultSet.getString("tel"),resultSet.getBoolean("gerant"));
+		});
+		
+	}
 	
 	//Delete
 	public void deleteUser(int id) {

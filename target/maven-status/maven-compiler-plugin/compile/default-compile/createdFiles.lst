@@ -1,7 +1,11 @@
-com\myresto\domaine\Produit.class
+com\myresto\dao\ICommandeProduitDao.class
 com\myresto\dao\ProduitDao.class
+com\myresto\domaine\CommandeProduit.class
+com\myresto\dao\CommandeProduitDao.class
+com\myresto\laucher\ServletInitializer.class
+com\myresto\service\ProduitService.class
+com\myresto\service\CommandeProduitService.class
+com\myresto\domaine\Produit.class
 com\myresto\laucher\DemoApplication.class
 com\myresto\domaine\User.class
 com\myresto\dao\IProduitDao.class
-com\myresto\laucher\ServletInitializer.class
-com\myresto\service\ProduitService.class
